@@ -1,0 +1,21 @@
+md5_la-md5.lo: md5.c \
+ /Users/weitz/ndk/android-16/sysroot/usr/include/string.h \
+ /Users/weitz/ndk/android-16/sysroot/usr/include/sys/cdefs.h \
+ /Users/weitz/ndk/android-16/sysroot/usr/include/sys/cdefs_elf.h \
+ /Users/weitz/ndk/android-16/sysroot/usr/include/android/api-level.h \
+ /Users/weitz/ndk/android-16/lib/gcc/arm-linux-androideabi/4.8/include/stddef.h \
+ /Users/weitz/ndk/android-16/sysroot/usr/include/malloc.h md5.h
+
+/Users/weitz/ndk/android-16/sysroot/usr/include/string.h:
+
+/Users/weitz/ndk/android-16/sysroot/usr/include/sys/cdefs.h:
+
+/Users/weitz/ndk/android-16/sysroot/usr/include/sys/cdefs_elf.h:
+
+/Users/weitz/ndk/android-16/sysroot/usr/include/android/api-level.h:
+
+/Users/weitz/ndk/android-16/lib/gcc/arm-linux-androideabi/4.8/include/stddef.h:
+
+/Users/weitz/ndk/android-16/sysroot/usr/include/malloc.h:
+
+md5.h:

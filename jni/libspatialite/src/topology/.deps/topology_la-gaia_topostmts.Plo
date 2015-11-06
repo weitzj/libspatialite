@@ -1,0 +1,82 @@
+topology_la-gaia_topostmts.lo: gaia_topostmts.c \
+ /Users/weitz/ndk/android-16/sysroot/usr/include/stdlib.h \
+ /Users/weitz/ndk/android-16/sysroot/usr/include/sys/cdefs.h \
+ /Users/weitz/ndk/android-16/sysroot/usr/include/sys/cdefs_elf.h \
+ /Users/weitz/ndk/android-16/sysroot/usr/include/android/api-level.h \
+ /Users/weitz/ndk/android-16/lib/gcc/arm-linux-androideabi/4.8/include/stddef.h \
+ /Users/weitz/ndk/android-16/sysroot/usr/include/string.h \
+ /Users/weitz/ndk/android-16/sysroot/usr/include/malloc.h \
+ /Users/weitz/ndk/android-16/sysroot/usr/include/alloca.h \
+ /Users/weitz/ndk/android-16/sysroot/usr/include/strings.h \
+ /Users/weitz/ndk/android-16/sysroot/usr/include/sys/types.h \
+ /Users/weitz/ndk/android-16/lib/gcc/arm-linux-androideabi/4.8/include/stdint.h \
+ /Users/weitz/ndk/android-16/sysroot/usr/include/stdint.h \
+ /Users/weitz/ndk/android-16/sysroot/usr/include/sys/_types.h \
+ /Users/weitz/ndk/android-16/sysroot/usr/include/machine/_types.h \
+ /Users/weitz/ndk/android-16/sysroot/usr/include/sys/_wchar_limits.h \
+ /Users/weitz/ndk/android-16/sysroot/usr/include/linux/posix_types.h \
+ /Users/weitz/ndk/android-16/sysroot/usr/include/linux/stddef.h \
+ /Users/weitz/ndk/android-16/sysroot/usr/include/linux/compiler.h \
+ /Users/weitz/ndk/android-16/sysroot/usr/include/asm/posix_types.h \
+ /Users/weitz/ndk/android-16/sysroot/usr/include/asm/types.h \
+ /Users/weitz/ndk/android-16/sysroot/usr/include/linux/types.h \
+ /Users/weitz/ndk/android-16/sysroot/usr/include/machine/kernel.h \
+ /Users/weitz/ndk/android-16/sysroot/usr/include/sys/sysmacros.h \
+ /Users/weitz/ndk/android-16/sysroot/usr/include/memory.h \
+ /Users/weitz/ndk/android-16/sysroot/usr/include/stdio.h \
+ /Users/weitz/ndk/android-16/lib/gcc/arm-linux-androideabi/4.8/include/stdarg.h \
+ ../../config.h
+
+/Users/weitz/ndk/android-16/sysroot/usr/include/stdlib.h:
+
+/Users/weitz/ndk/android-16/sysroot/usr/include/sys/cdefs.h:
+
+/Users/weitz/ndk/android-16/sysroot/usr/include/sys/cdefs_elf.h:
+
+/Users/weitz/ndk/android-16/sysroot/usr/include/android/api-level.h:
+
+/Users/weitz/ndk/android-16/lib/gcc/arm-linux-androideabi/4.8/include/stddef.h:
+
+/Users/weitz/ndk/android-16/sysroot/usr/include/string.h:
+
+/Users/weitz/ndk/android-16/sysroot/usr/include/malloc.h:
+
+/Users/weitz/ndk/android-16/sysroot/usr/include/alloca.h:
+
+/Users/weitz/ndk/android-16/sysroot/usr/include/strings.h:
+
+/Users/weitz/ndk/android-16/sysroot/usr/include/sys/types.h:
+
+/Users/weitz/ndk/android-16/lib/gcc/arm-linux-androideabi/4.8/include/stdint.h:
+
+/Users/weitz/ndk/android-16/sysroot/usr/include/stdint.h:
+
+/Users/weitz/ndk/android-16/sysroot/usr/include/sys/_types.h:
+
+/Users/weitz/ndk/android-16/sysroot/usr/include/machine/_types.h:
+
+/Users/weitz/ndk/android-16/sysroot/usr/include/sys/_wchar_limits.h:
+
+/Users/weitz/ndk/android-16/sysroot/usr/include/linux/posix_types.h:
+
+/Users/weitz/ndk/android-16/sysroot/usr/include/linux/stddef.h:
+
+/Users/weitz/ndk/android-16/sysroot/usr/include/linux/compiler.h:
+
+/Users/weitz/ndk/android-16/sysroot/usr/include/asm/posix_types.h:
+
+/Users/weitz/ndk/android-16/sysroot/usr/include/asm/types.h:
+
+/Users/weitz/ndk/android-16/sysroot/usr/include/linux/types.h:
+
+/Users/weitz/ndk/android-16/sysroot/usr/include/machine/kernel.h:
+
+/Users/weitz/ndk/android-16/sysroot/usr/include/sys/sysmacros.h:
+
+/Users/weitz/ndk/android-16/sysroot/usr/include/memory.h:
+
+/Users/weitz/ndk/android-16/sysroot/usr/include/stdio.h:
+
+/Users/weitz/ndk/android-16/lib/gcc/arm-linux-androideabi/4.8/include/stdarg.h:
+
+../../config.h:
