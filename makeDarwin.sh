@@ -58,7 +58,7 @@ export LDFLAGS="-L${PREFIX}/lib"
 make
 make install
 make distclean
-cp "${LIBDIR}/mod_spatialite.7.so" "${LIBDIR}/libspatialite.dylib"
+cp "${LIBDIR}/mod_spatialite.7.so" "${LIBDIR}/mod_spatialite.dylib"
 
 
 # Fixing dynamic library search paths
@@ -70,7 +70,7 @@ do
     then
         install_name_tool -change "${LIBDIR}/libgeos-3.5.0.dylib" "@loader_path/libgeos-3.5.0.dylib" "${fullPath}"
     fi
-    if [ "${fileName}" == 'libspatialite.dylib' ]
+    if [ "${fileName}" == 'mod_spatialite.dylib' ]
     then
         echo "fixing libspatialite"
         install_name_tool -change "${LIBDIR}/libgeos_c.1.dylib" "@loader_path/libgeos_c.1.dylib" "${fullPath}"
