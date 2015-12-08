@@ -14,10 +14,10 @@ library_names='libxml2.2.dylib libxml2.dylib'
 old_library=''
 
 # Linker flags that can not go in dependency_libs.
-inherited_linker_flags=' '
+inherited_linker_flags='  -pthread'
 
 # Libraries that this one depends upon.
-dependency_libs=' -lpthread -lz -llzma -liconv -lm'
+dependency_libs=' -lpthread -lz -L/Users/weitz/Documents/work/spatial/darwin/amd64/lib /Users/weitz/Documents/work/spatial/darwin/amd64/lib/liblzma.la /Users/weitz/Documents/work/spatial/darwin/amd64/lib/libiconv.la -lm'
 
 # Names of additional weak libraries provided by this library
 weak_library_names=''

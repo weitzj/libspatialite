@@ -14,10 +14,10 @@ library_names='mod_spatialite.7.so mod_spatialite.so'
 old_library=''
 
 # Linker flags that can not go in dependency_libs.
-inherited_linker_flags=' '
+inherited_linker_flags='  -pthread'
 
 # Libraries that this one depends upon.
-dependency_libs=' -L/Users/weitz/Documents/work/spatial/darwin/amd64/lib /Users/weitz/Documents/work/spatial/darwin/amd64/lib/libxml2.la -llzma -ldl -liconv /Users/weitz/Documents/work/spatial/darwin/amd64/lib/libproj.la -lpthread -lm -lz /Users/weitz/Documents/work/spatial/darwin/amd64/lib/libsqlite3.la /Users/weitz/Documents/work/spatial/darwin/amd64/lib/libgeos_c.la /Users/weitz/Documents/work/spatial/darwin/amd64/lib/libgeos.la'
+dependency_libs=' -L/Users/weitz/Documents/work/spatial/darwin/amd64/lib /Users/weitz/Documents/work/spatial/darwin/amd64/lib/libxml2.la /Users/weitz/Documents/work/spatial/darwin/amd64/lib/liblzma.la -ldl /Users/weitz/Documents/work/spatial/darwin/amd64/lib/libcharset.la /Users/weitz/Documents/work/spatial/darwin/amd64/lib/libiconv.la /Users/weitz/Documents/work/spatial/darwin/amd64/lib/libproj.la -lpthread -lm -lz /Users/weitz/Documents/work/spatial/darwin/amd64/lib/libsqlite3.la /Users/weitz/Documents/work/spatial/darwin/amd64/lib/libgeos_c.la /Users/weitz/Documents/work/spatial/darwin/amd64/lib/libgeos.la'
 
 # Names of additional weak libraries provided by this library
 weak_library_names=''

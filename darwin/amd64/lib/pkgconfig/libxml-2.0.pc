@@ -9,5 +9,5 @@ Version: 2.9.1
 Description: libXML library version2.
 Requires:
 Libs: -L${libdir} -lxml2
-Libs.private:  -lpthread -lz  -liconv -lm  
-Cflags: -I${includedir}/libxml2 
+Libs.private:  -lpthread -lz -L/Users/weitz/Documents/work/spatial/darwin/amd64/lib -liconv -lm  
+Cflags: -I${includedir}/libxml2 -I/Users/weitz/Documents/work/spatial/darwin/amd64/include 
