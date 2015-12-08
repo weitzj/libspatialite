@@ -1,20 +1,20 @@
 #!/bin/bash
 
 set -e
-
-ICONV_PATH='libiconv-1.13.1'
-SQLITE_PATH='sqlite-autoconf-3090200'
-PROJ4_PATH='proj.4-4.9.2'
-GEOS_PATH='geos-3.5.0'
-LZMA_PATH='xz-5.2.2'
-XML2_PATH='libxml2-2.9.1'
-SPATIALITE_PATH='libspatialite'
-
-
 BASE=$(cd $(dirname $0) && pwd)
-cd "${BASE}/jni"
-
+JNIDIR="${BASE}/jni"
 PREFIX="${BASE}/darwin/amd64"
+INCLUDEDIR="${PREFIX}/include"
+LIBDIR="${PREFIX}/lib"
+
+ICONV_PATH="${JNIDIR}/libiconv-1.13.1"
+SQLITE_PATH="${JNIDIR}/sqlite-autoconf-3090200"
+PROJ4_PATH="${JNIDIR}/proj.4-4.9.2"
+GEOS_PATH="${JNIDIR}/geos-3.5.0"
+LZMA_PATH="${JNIDIR}/xz-5.2.2"
+XML2_PATH="${JNIDIR}/libxml2-2.9.1"
+SPATIALITE_PATH="${JNIDIR}/libspatialite"
+
 
 # SQLITE
 cd "${SQLITE_PATH}"
@@ -22,7 +22,6 @@ env CFLAGS='-DSQLITE_ENABLE_LOAD_EXTENSION' ./configure --prefix="${PREFIX}" --e
 make
 make install
 make distclean
-cd ..
 
 # PROJ
 cd "${PROJ4_PATH}"
@@ -30,7 +29,6 @@ cd "${PROJ4_PATH}"
 make
 make install
 make distclean
-cd ..
 
 # GEOS
 cd "${GEOS_PATH}"
@@ -38,7 +36,6 @@ cd "${GEOS_PATH}"
 make
 make install
 make distclean
-cd ..
 
 # XZ
 cd "${LZMA_PATH}"
@@ -46,7 +43,6 @@ cd "${LZMA_PATH}"
 make
 make install
 make distclean
-cd ..
 
 # LIBXML2
 cd "${XML2_PATH}"
@@ -54,7 +50,6 @@ cd "${XML2_PATH}"
 make
 make install
 make distclean
-cd ..
 
 cd "${SPATIALITE_PATH}"
 export CFLAGS="-I${PREFIX}/include"
@@ -63,7 +58,25 @@ export LDFLAGS="-L${PREFIX}/lib"
 make
 make install
 make distclean
-cd ..
+cp "${LIBDIR}/mod_spatialite.7.so" "${LIBDIR}/libspatialite.dylib"
 
 
-cd "${BASE}"
+# Fixing dynamic library search paths
+for fullPath in $(find $LIBDIR -type f -maxdepth 1 -regex ".*[.dylib]\$")
+do
+    fileName=$(basename $fullPath)
+    install_name_tool -id "${fileName}" "${fullPath}"
+    if [ "${fileName}" == 'libgeos_c.1.dylib' ]
+    then
+        install_name_tool -change "${LIBDIR}/libgeos-3.5.0.dylib" "@loader_path/libgeos-3.5.0.dylib" "${fullPath}"
+    fi
+    if [ "${fileName}" == 'libspatialite.dylib' ]
+    then
+        echo "fixing libspatialite"
+        install_name_tool -change "${LIBDIR}/libgeos_c.1.dylib" "@loader_path/libgeos_c.1.dylib" "${fullPath}"
+        install_name_tool -change "${LIBDIR}/libgeos-3.5.0.dylib" "@loader_path/libgeos-3.5.0.dylib" "${fullPath}"
+        install_name_tool -change "${LIBDIR}/libproj.9.dylib" "@loader_path/libproj.9.dylib" "${fullPath}"
+        install_name_tool -change "${LIBDIR}/libsqlite3.0.dylib" "@loader_path/libsqlite3.0.dylib" "${fullPath}"
+        install_name_tool -change "${LIBDIR}/libxml2.2.dylib" "@loader_path/libxml2.2.dylib" "${fullPath}"
+    fi
+done
