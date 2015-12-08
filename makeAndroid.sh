@@ -2,8 +2,9 @@
 
 set -e
 BASE=$(cd $(dirname $0) && pwd)
-JNIDIR="${BASE}/jni"
+source "${BASE}/pathSetup.sh"
 
-cd "${JNIDIR}"
+cp "${JNIDIR}/libspatialite_config.h" "${SPATIALITE_PATH}/config.h"
+
 ndk-build
 
