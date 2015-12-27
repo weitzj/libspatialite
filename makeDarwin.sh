@@ -1,7 +1,7 @@
 #!/bin/bash
 
 set -e
-BASE=$(cd $(dirname $0) && pwd)
+BASE=$(cd "$(dirname "$0")" && pwd)
 source "${BASE}/pathSetup.sh"
 
 # SQLITE

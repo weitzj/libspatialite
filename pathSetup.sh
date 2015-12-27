@@ -1,6 +1,6 @@
 #!/bin/bash
 
-BASE=$(cd $(dirname $0) && pwd)
+BASE=$(cd "$(dirname "$0")" && pwd)
 JNIDIR="${BASE}/jni"
 CONFIGSDIR="${BASE}/generated_configs"
 PREFIX="${BASE}/darwin/amd64"
